@@ -25,9 +25,14 @@ func (i *Int) Value() IntVal {
 	return i.val
 }
 
-// The Set method sets the underlying IntVal of this Int.
+// The Set method sets the underlying IntVal to the given int, v.
 func (i *Int) Set(v int) {
 	i.val = v
+}
+
+// The Clear method sets the underlying IntVal to nil.
+func (i *Int) Clear() {
+	i.val = nil
 }
 
 func parseInt(s string) (*Int, error) {
