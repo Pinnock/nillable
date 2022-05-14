@@ -14,7 +14,7 @@ type Int struct {
 
 // NewInt returns a pointer to a new instance of Int that wraps the underlying
 // IntVal obtained by parsing the given string, s. If the string was not
-// successfully parsed then an non-nil error is also returned. Otherwsie the
+// successfully parsed then a non-nil error is also returned. Otherwsie the
 // error is nil.
 func NewInt(s string) (*Int, error) {
 	return parseInt(s)
