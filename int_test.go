@@ -37,6 +37,7 @@ func TestNewIntWithError(t *testing.T) {
 		t.Fatalf("Expected value of nil, but got %v\n", i.val)
 	}
 }
+
 func TestIntSet(t *testing.T) {
 	// Arrange
 	var a, b Int
@@ -51,6 +52,24 @@ func TestIntSet(t *testing.T) {
 	}
 	if b.val != 15 {
 		t.Fatalf("Expected a value of 15, but got %v\n", b.val)
+	}
+}
+
+func TestIntValue(t *testing.T) {
+	// Arrange
+	var i1 Int
+	i2, _ := NewInt("-1")
+	i3, _ := NewInt("1.0")
+
+	// Assert
+	if i1.Value() != nil {
+		t.Fatalf("Expected a value of nil, but got %v\n", i1.val)
+	}
+	if i2.Value() != -1 {
+		t.Fatalf("Expected a value of -1, but got %v\n", i2.val)
+	}
+	if i3.Value() != nil {
+		t.Fatalf("Expected a value of nil, but got %v\n", i1.val)
 	}
 }
 
