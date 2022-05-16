@@ -40,5 +40,5 @@ func parseInt(s string) (*Int, error) {
 	if err != nil {
 		return &Int{val: nil}, err
 	}
-	return &Int{val: val}, err
+	return &Int{val: val}, nil
 }
